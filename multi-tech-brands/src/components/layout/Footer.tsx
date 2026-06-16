@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 import { site, nav } from "@/lib/site";
-import { services } from "@/data/content";
+import { services, brands } from "@/data/content";
 
 export default function Footer() {
   return (
     <footer className="relative mt-24 border-t border-white/10">
       <div className="shell py-20">
-        <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <Logo />
             <p className="mt-6 text-sm leading-relaxed text-silver-400">
@@ -35,6 +35,22 @@ export default function Footer() {
             <FooterLink href="/contact">Contact</FooterLink>
           </FooterCol>
 
+          <FooterCol title="Our Brands">
+            {brands.map((b) => (
+              <li key={b.url}>
+                <a
+                  href={b.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-silver-400 transition-colors hover:text-white"
+                  data-cursor="hover"
+                >
+                  {b.name}
+                </a>
+              </li>
+            ))}
+          </FooterCol>
+
           <FooterCol title="Connect">
             <FooterLink href={site.social.linkedin}>LinkedIn</FooterLink>
             <FooterLink href={site.social.instagram}>Instagram</FooterLink>
@@ -47,7 +63,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-start justify-between gap-4 text-xs text-silver-400 md:flex-row md:items-center">
           <p>
-            © {new Date().getFullYear()} {site.legalName}. All rights reserved.
+            &copy; {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 animate-pulse-glow rounded-full bg-neon" />
