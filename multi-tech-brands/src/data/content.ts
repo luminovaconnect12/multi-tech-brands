@@ -48,8 +48,8 @@ export const services: Service[] = [
   {
     slug: "ebook-publishing",
     index: "02",
-    name: "eBook Publishing",
-    short: "eBook Publishing Services",
+    name: "E-Book Publishing",
+    short: "E-Book Publishing Services",
     tagline: "From manuscript to bestseller.",
     description:
       "We turn manuscripts into market-ready books and authors into authorities. Editing, design, formatting, distribution, and launch marketing — a single team carrying your book from first draft to ranked release.",
@@ -205,7 +205,7 @@ export const testimonials = [
 export const faqs = [
   {
     q: "What exactly is Multi Tech Brands?",
-    a: "Multi Tech Brands is a group of specialist companies operating under one roof — covering trademark & IP, eBook publishing, design, and digital marketing. You get the breadth of an agency network with the accountability of a single partner.",
+    a: "Multi Tech Brands is a group of specialist companies operating under one roof — covering trademark & IP, E-Book publishing, design, and digital marketing. You get the breadth of an agency network with the accountability of a single partner.",
   },
   {
     q: "Can I hire you for just one service?",
@@ -251,7 +251,7 @@ export interface PortfolioItem {
 export const portfolio: PortfolioItem[] = [
   { title: "Aurelia Skincare", category: "Brand + Trademark", service: "Design / IP", result: "Trademarked & rebranded in one quarter", tone: "a" },
   { title: "NorthLoop Commerce", category: "Performance Marketing", service: "Digital Marketing", result: "−38% CPA at 2x spend", tone: "b" },
-  { title: "The Founder's Edge", category: "Book Launch", service: "eBook Publishing", result: "#1 in category, launch week", tone: "c" },
+  { title: "The Founder's Edge", category: "Book Launch", service: "E-Book Publishing", result: "#1 in category, launch week", tone: "c" },
   { title: "Verda Systems", category: "Rebrand", service: "Design", result: "Repositioned upmarket; 2 enterprise wins", tone: "d" },
   { title: "Lumen Health", category: "Web + Growth", service: "Design / Marketing", result: "+61% qualified demos", tone: "e" },
   { title: "Atlas Realty Group", category: "Identity + Lead Gen", service: "Design / Marketing", result: "Pipeline filled in 60 days", tone: "f" },
@@ -302,7 +302,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "founders-edge",
     client: "The Founder's Edge",
     title: "A first-time author hits #1 in category",
-    services: ["eBook Publishing"],
+    services: ["E-Book Publishing"],
     challenge:
       "A founder had a finished manuscript but no path to a credible, well-ranked launch that would build their platform.",
     approach:
@@ -312,5 +312,70 @@ export const caseStudies: CaseStudy[] = [
       { value: "1,800+", label: "Copies in first 30 days" },
       { value: "12", label: "Podcast bookings from the launch" },
     ],
+  },
+];
+
+export interface Brand {
+  name: string;
+  url: string;
+  display: string;
+  category: string;
+  tagline: string;
+  description: string;
+  highlights: string[];
+  services: string[];
+  location: string;
+  relatedService: string;
+  tone: string;
+}
+
+export const brands: Brand[] = [
+  {
+    name: "Legal Mark Experts",
+    url: "https://legalmarkexperts.com",
+    display: "legalmarkexperts.com",
+    category: "Trademark & IP",
+    tagline: "Secure your brand with expert trademark registration.",
+    description:
+      "Legal Mark Experts makes the U.S. trademark process simple, fast, and affordable — guiding founders from clearance search to USPTO filing and beyond. A dedicated team protects your name, logo, and identity at every step.",
+    highlights: [
+      "Trusted by 3,000+ founders nationwide",
+      "Filings appear in the USPTO database within 24 hours",
+      "Transparent packages from $99 + USPTO fees",
+    ],
+    services: [
+      "Trademark Registration & USPTO Filing",
+      "Free & Comprehensive Trademark Search",
+      "Office Action Responses & Renewals",
+      "Trademark Monitoring & Enforcement",
+      "Cease & Desist & Litigation",
+    ],
+    location: "United States",
+    relatedService: "trademark",
+    tone: "a",
+  },
+  {
+    name: "Author's Craft",
+    url: "https://authorscraft.com",
+    display: "authorscraft.com",
+    category: "E-Book Publishing",
+    tagline: "Your story deserves to be published.",
+    description:
+      "Author's Craft is a full-service book studio pairing master ghostwriters, editors, and publishing strategists to turn untold stories into published books — from first concept to bestseller, all under one roof.",
+    highlights: [
+      "America's premier book studio",
+      "Based in Brooklyn, New York",
+      "Concept-to-bestseller, handled end to end",
+    ],
+    services: [
+      "Ghostwriting",
+      "Editing & Proofreading",
+      "Cover Design & Illustration",
+      "Publishing & Distribution",
+      "Audiobook Production",
+    ],
+    location: "Brooklyn, NY, USA",
+    relatedService: "ebook-publishing",
+    tone: "c",
   },
 ];
