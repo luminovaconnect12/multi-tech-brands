@@ -72,7 +72,7 @@ export default function RootLayout({
     sameAs: Object.values(site.social),
     makesOffer: [
       "Trademark Registration & Intellectual Property",
-      "eBook Publishing",
+      "E-Book Publishing",
       "Design Services",
       "Digital Marketing",
     ].map((s) => ({ "@type": "Offer", name: s })),

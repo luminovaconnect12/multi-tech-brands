@@ -9,12 +9,14 @@ import ProcessSection from "@/components/home/ProcessSection";
 import IndustriesSection from "@/components/home/IndustriesSection";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
+import Brands from "@/components/sections/Brands";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <Overview />
+      <Brands />
       <ServicesSection />
       <Metrics />
       <WhyUs />
